@@ -119,7 +119,7 @@ class OutputFile:
                     DipoleFlag = False
                 if DipoleFlag is True:
                     ReadLine = Line.split()
-                    if len(ReadLine) = 3:
+                    if len(ReadLine) == 3:
                         Dipole.append(ReadLine)
                 if ("au             Debye") in Line:
                     Dipole = []
