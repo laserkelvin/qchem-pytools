@@ -18,7 +18,9 @@ class OutputFile:
     InfoDict = {
         "filename": " ",
         "basis": " ",
+        "success": False,
         "method": " ",
+        "dipole moment": [],
         "point group": " ",
         "energies": {
             "final_energy": 0.,
@@ -26,9 +28,10 @@ class OutputFile:
             "cc_cycles": dict(),
         },
         "coordinates": [],
-        "input_zmat": [],
-        "final_zmat": [],
-        "natoms": 0
+        "input zmat": [],
+        "final zmat": [],
+        "natoms": 0,
+        "gradient norm": dict(),
     }
     def __init__(self, File):
         self.InfoDict["filename"] = File
@@ -42,8 +45,10 @@ class OutputFile:
         geo_counter = 0
         skip_counter = 0
         CurrentCoords = []
+        DipoleFlag = False
         RotFlag = False
         SCFFlag = False
+        CCFlag = False
         IZMATFlag = False        # Initial ZMAT file
         FZMATFlag = False        # Final ZMAT file
         ReadCoords = False
@@ -52,6 +57,7 @@ class OutputFile:
                 if ("The final electronic energy is") in Line:
                     ReadLine = Line.split()
                     self.InfoDict["energies"]["final_energy"] = float(ReadLine[5])
+                    self.InfoDict["success"] = True
                 if ("The full molecular point group ") in Line:
                     ReadLine = Line.split()
                     self.InfoDict["point group"] = ReadLine[6]
@@ -91,7 +97,7 @@ class OutputFile:
                     if ("********") in Line:
                         skip_counter += 1
                     elif skip_counter == 1:
-                        self.InfoDict["final_zmat"].append(Line)
+                        self.InfoDict["final zmat"].append(Line)
                     elif skip_counter == 2:
                         FZMATFlag = False
                         skip_counter = 0
@@ -109,6 +115,33 @@ class OutputFile:
                         skip_counter = 0
                 if ("Coordinates (in bohr)") in Line:
                     ReadCoords = True
+                if ("Conversion factor used") in Line:
+                    DipoleFlag = False
+                if DipoleFlag is True:
+                    ReadLine = Line.split()
+                    if len(ReadLine) = 3:
+                        Dipole.append(ReadLine)
+                if ("au             Debye") in Line:
+                    Dipole = []
+                    DipoleFlag = True
+                if ("Molecular gradient norm") in Line:
+                    ReadLine = Line.split()
+                    self.InfoDict["gradient norm"][geo_counter] = float(ReadLine[3])
+                    geo_counter += 1
+                if CCFlag is True:
+                    if skip_counter == 2:
+                        self.InfoDict["cc_cycles"][cc_counter] = CCCycle
+                        CCFlag = False
+                        cc_counter += 1
+                    elif ("-------") in Line:
+                        skip_counter += 1
+                    else:
+                        ReadLine = Line.split()[:3]
+                        CCCycle.append([float(Value) for Value in ReadLine])
+                if ("Iteration         Energy              Energy") in Line:
+                    skip_counter = 0
+                    CCCycle = []
+                    CCFlag = True
         self.InfoDict["natoms"] = len(self.InfoDict["coordinates"])
 
 
