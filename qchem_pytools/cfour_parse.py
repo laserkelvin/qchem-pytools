@@ -130,7 +130,7 @@ class OutputFile:
                     geo_counter += 1
                 if CCFlag is True:
                     if skip_counter == 2:
-                        self.InfoDict["cc_cycles"][cc_counter] = CCCycle
+                        self.InfoDict["energies"]["cc_cycles"][cc_counter] = CCCycle
                         CCFlag = False
                         cc_counter += 1
                     elif ("-------") in Line:
