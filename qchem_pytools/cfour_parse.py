@@ -35,10 +35,6 @@ class OutputFile:
         self.parse()
 
 
-    def strip_formatting(line):
-        return line.split()[0]
-
-
     def parse(self):
         scf_iter = 0
         scf_cycle = 0
