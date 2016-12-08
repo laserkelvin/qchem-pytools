@@ -41,7 +41,7 @@ class OutputFile:
     def parse(self):
         scf_iter = 0
         scf_cycle = 0
-        cc_counter = 0
+        cc_cycle = 0
         geo_counter = 0
         skip_counter = 0
         CurrentCoords = []
@@ -114,8 +114,10 @@ class OutputFile:
                         CurrentCoords = []
                         skip_counter = 0
                 if ("Coordinates (in bohr)") in Line:
+                    skip_counter = 0
                     ReadCoords = True
                 if ("Conversion factor used") in Line:
+                    self.InfoDict["dipole moment"] = Dipole
                     DipoleFlag = False
                 if DipoleFlag is True:
                     ReadLine = Line.split()
@@ -130,17 +132,17 @@ class OutputFile:
                     geo_counter += 1
                 if CCFlag is True:
                     if skip_counter == 2:
-                        self.InfoDict["energies"]["cc_cycles"][cc_counter] = CCCycle
+                        self.InfoDict["energies"]["cc_cycles"][cc_cycle] = CurrentCC
                         CCFlag = False
-                        cc_counter += 1
+                        cc_cycle += 1
                     elif ("-------") in Line:
                         skip_counter += 1
                     else:
                         ReadLine = Line.split()[:3]
-                        CCCycle.append([float(Value) for Value in ReadLine])
+                        CurrentCC.append([float(Value) for Value in ReadLine])
                 if ("Iteration         Energy              Energy") in Line:
                     skip_counter = 0
-                    CCCycle = []
+                    CurrentCC = []
                     CCFlag = True
         self.InfoDict["natoms"] = len(self.InfoDict["coordinates"])
 
