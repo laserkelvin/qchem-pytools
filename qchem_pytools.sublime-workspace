@@ -1,0 +1,1173 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dir",
+				"dir\tdir"
+			],
+			[
+				"Index",
+				"Index\tstatement"
+			],
+			[
+				"Rotational",
+				"RotationalLevels〔variable〕"
+			],
+			[
+				"Maxi",
+				"MaximumJ〔argument〕"
+			],
+			[
+				"Cen",
+				"CentredX〔variable〕"
+			],
+			[
+				"Annot",
+				"Annotations"
+			],
+			[
+				"PeakInd",
+				"PeakIndices"
+			],
+			[
+				"Linea",
+				"LinearResidualFunction〔function〕"
+			],
+			[
+				"LinearRe",
+				"LinearResidualFunction"
+			],
+			[
+				"least",
+				"least_squares"
+			],
+			[
+				"Para",
+				"Parameters〔variable〕"
+			],
+			[
+				"multi",
+				"multiply"
+			],
+			[
+				"Genera",
+				"GenerateAnnotations〔function〕"
+			],
+			[
+				"Anno",
+				"Annotation〔variable〕"
+			],
+			[
+				"Annotat",
+				"Annotations〔argument〕"
+			],
+			[
+				"Default",
+				"DefaultAnnotationSettings〔function〕"
+			],
+			[
+				"Integra",
+				"IntegrateColumn"
+			],
+			[
+				"Da",
+				"DataFrameB〔argument〕"
+			],
+			[
+				"DataFrame",
+				"DataFrameB"
+			],
+			[
+				"Dataf",
+				"DataFrameB〔argument〕"
+			],
+			[
+				"Dat",
+				"DataFrameA〔argument〕"
+			],
+			[
+				"DataFra",
+				"DataFrameB"
+			],
+			[
+				"NewFram",
+				"NewFrameB"
+			],
+			[
+				"Coord",
+				"Coordinates"
+			],
+			[
+				"Get",
+				"GetCoordinates"
+			],
+			[
+				"Veloci",
+				"VelocityCounter"
+			],
+			[
+				"Coordina",
+				"CoordinateCounter"
+			],
+			[
+				"Read",
+				"ReadLines2Array"
+			],
+			[
+				"Value",
+				"ValueHolder\t(statement)"
+			],
+			[
+				"histogr",
+				"histogram2d\t(function)"
+			],
+			[
+				"Fil",
+				"FileList\t(statement)"
+			],
+			[
+				"Molecul",
+				"MoleculeList\t(statement)"
+			],
+			[
+				"Molecule",
+				"MoleculeFromXYZ\t(function)"
+			],
+			[
+				"Molecu",
+				"MoleculeFromXYZ\t(function)"
+			],
+			[
+				"Charge",
+				"ChargeTable\t(statement)"
+			],
+			[
+				"Plot",
+				"PlotType\t(param)"
+			],
+			[
+				"Co",
+				"ColourCounts\t(statement)"
+			],
+			[
+				"Convert",
+				"ConvertSpeedDistribution\t(function)"
+			],
+			[
+				"Invert",
+				"Inverted\t(statement)"
+			],
+			[
+				"Inver",
+				"InvertLUT\t(function)"
+			],
+			[
+				"Y",
+				"Y\t(statement)"
+			],
+			[
+				"PyA",
+				"PyAbelReconstruction\t(function)"
+			],
+			[
+				"Image",
+				"ImageCentre\t(statement)"
+			],
+			[
+				"Backg",
+				"BackgroundImages"
+			],
+			[
+				"Subtrac",
+				"SubtractedImage\t(statement)"
+			],
+			[
+				"Angu",
+				"AngularData\t(statement)"
+			],
+			[
+				"Histo",
+				"HistogramData\t(statement)"
+			],
+			[
+				"Wavele",
+				"WavelengthRange"
+			],
+			[
+				"Inde",
+				"IndexRange\t(param)"
+			],
+			[
+				"Spee",
+				"Speed\t(statement)"
+			],
+			[
+				"Wave",
+				"Wavelength\t(statement)"
+			],
+			[
+				"Speed",
+				"SpeedCrop\t(param)"
+			],
+			[
+				"Wavelen",
+				"WavelengthCrop\t(param)"
+			],
+			[
+				"Blu",
+				"BlurSize\t(statement)"
+			],
+			[
+				"Defa",
+				"DefaultAxes\t(function)"
+			],
+			[
+				"Parameter",
+				"ParameterOut\t(statement)"
+			],
+			[
+				"Initialise",
+				"InitialisePlotTypes"
+			],
+			[
+				"UpdateP",
+				"UpdatePlotButton\t(statement)"
+			],
+			[
+				"Data",
+				"DatatoPlot\t(statement)"
+			],
+			[
+				"Colum",
+				"ColumnNumbers\t(statement)"
+			],
+			[
+				"Backgro",
+				"BackgroundInstance\t(statement)"
+			],
+			[
+				"Oxyge",
+				"OxygenAtomSpeed\t(statement)"
+			],
+			[
+				"Linear",
+				"LinearRegression\t(statement)"
+			],
+			[
+				"Oxy",
+				"OxygenAtomSpeed\t(statement)"
+			],
+			[
+				"output_",
+				"output_notebook\t(function)"
+			],
+			[
+				"Thres",
+				"ThresholdedElements\t(statement)"
+			],
+			[
+				"excel",
+				"excel_tab\t(class)"
+			],
+			[
+				"Maxim",
+				"MaximumEnergy\t(param)"
+			],
+			[
+				"Combin",
+				"CombinationHarmonicOscillator\t(function)"
+			],
+			[
+				"Combinat",
+				"CombinationHarmonicOscillator\t(function)"
+			],
+			[
+				"combinations",
+				"combinations_with_replacement\t(class)"
+			],
+			[
+				"Maximum",
+				"MaximumEnergy\t(param)"
+			],
+			[
+				"mult",
+				"multiply\t(instance)"
+			],
+			[
+				"mul",
+				"multiply\t(instance)"
+			],
+			[
+				"KER",
+				"KERDataFrame\t(statement)"
+			],
+			[
+				"Boundar",
+				"BoundaryConditions"
+			],
+			[
+				"Dic",
+				"Dict2List"
+			],
+			[
+				"Mass",
+				"Mass"
+			],
+			[
+				"Bounda",
+				"BoundaryConditions"
+			],
+			[
+				"Convolu",
+				"ConvolutionBins"
+			],
+			[
+				"Vari",
+				"Variables"
+			],
+			[
+				"Bound",
+				"BoundaryConditions"
+			],
+			[
+				"Boun",
+				"BoundaryConditions"
+			],
+			[
+				"Function",
+				"FunctionName"
+			],
+			[
+				"Convol",
+				"ConvolutionResult"
+			],
+			[
+				"Convo",
+				"ConvolutionBins"
+			],
+			[
+				"boltzma",
+				"boltzmann_function"
+			],
+			[
+				"Resha",
+				"ReshapeFunction"
+			],
+			[
+				"boltz",
+				"boltzmann_function"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"cost",
+				"costhetamin"
+			],
+			[
+				"costh",
+				"costhetamax"
+			],
+			[
+				"costhet",
+				"costhetamin"
+			],
+			[
+				"Fully",
+				"FullSymmetrisedImage"
+			],
+			[
+				"Blurred",
+				"BlurredImage"
+			],
+			[
+				"Symme",
+				"SymmetriseCrop"
+			],
+			[
+				"Symmetrise",
+				"SymmetrisedImage"
+			],
+			[
+				"Add",
+				"AddArrays"
+			],
+			[
+				"O",
+				"OriginalImageSize"
+			],
+			[
+				"Prin",
+				"PrincipalMoments"
+			],
+			[
+				"princ",
+				"PrincipalAxes"
+			],
+			[
+				"Princi",
+				"PrincipalMoments"
+			],
+			[
+				"centre",
+				"center-of-mass"
+			],
+			[
+				"Eigen",
+				"Eigenvalues"
+			],
+			[
+				"Inertia",
+				"Inertia"
+			],
+			[
+				"COM",
+				"COMCoordinates"
+			],
+			[
+				"Atom",
+				"AtomNumber"
+			],
+			[
+				"Spl",
+				"SplitLine"
+			],
+			[
+				"Inerti",
+				"InertiaMatrix"
+			],
+			[
+				"In",
+				"InputXYZ"
+			],
+			[
+				"Cold",
+				"ColdAmplitude"
+			],
+			[
+				"Ho",
+				"HotAmplitude"
+			],
+			[
+				"Boot",
+				"BootStrapAnalysis"
+			],
+			[
+				"energy",
+				"energy_levels"
+			],
+			[
+				"energy_",
+				"energy_array"
+			],
+			[
+				"energ",
+				"energy_levels"
+			],
+			[
+				"gs",
+				"gs_levels"
+			],
+			[
+				"transiti",
+				"transition_energy"
+			],
+			[
+				"min",
+				"gs_min_energy"
+			],
+			[
+				"Boh",
+				"Bohr2Ang"
+			],
+			[
+				"read",
+				"read_lines"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "setup.py",
+			"settings":
+			{
+				"buffer_size": 298,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/__init__.py",
+			"settings":
+			{
+				"buffer_size": 183,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/abinitio_directories.py",
+			"settings":
+			{
+				"buffer_size": 803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/abinitio_template.py",
+			"settings":
+			{
+				"buffer_size": 331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/cfour_input.py",
+			"settings":
+			{
+				"buffer_size": 2281,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "qchem_pytools/cfour_parse.py",
+			"settings":
+			{
+				"buffer_size": 11531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/figure_settings.py",
+			"settings":
+			{
+				"buffer_size": 15804,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/html_template.py",
+			"settings":
+			{
+				"buffer_size": 2558,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 111.0,
+		"last_filter": "Package Control: Remov",
+		"selected_items":
+		[
+			[
+				"Package Control: Remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Discov",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: U",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: searc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"Package Control: Install Package",
+			"Package Control",
+			"Package Control:",
+			"Package Control;",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kelvin/GitHub/IPython-Notebook-Tools/NotebookTools.py",
+		"/Users/kelvin/GitHub/Molecule-Tools/MoleculeTools.py",
+		"/Users/kelvin/GitHub/IPython-Notebook-Tools/SpectralAnalysis.py",
+		"/Users/kelvin/GitHub/Python-Ion-Imaging/ImageTools.py",
+		"/Users/kelvin/GitHub/qchem-pytools/qchem_pytools/html_template.py",
+		"/Users/kelvin/GitHub/qchem-pytools/qchem_pytools/cfour_parse.py",
+		"/Users/kelvin/GitHub/qchem-pytools/qchem_pytools/abinitio_directories.py",
+		"/Users/kelvin/GitHub/qchem-pytools/qchem_pytools/abinitio_template.py",
+		"/private/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1481152765/caynow/massdata/kelvin/GitHub/qchem-pytools/qchem_pytools/cfour_parse.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1481152765/caynow/massdata/kelvin/GitHub/qchem-pytools/qchem_pytools/cfour_parse.py",
+		"/Users/kelvin/GitHub/qchem-pytools/qchem_pytools/figure_settings.py",
+		"/Users/kelvin/GitHub/qchem-pytools/README.md",
+		"/Users/kelvin/Google Drive/Python Salt Mines/Figure Settings/FigureSettings.py",
+		"/Users/kelvin/GitHub/qchem-pytools/qchem-pytools/cfour-parse.py",
+		"/Users/kelvin/GitHub/IPython-Notebook-Tools/PlottingTools.py",
+		"/Users/kelvin/GitHub/IPython-Notebook-Tools/InteractiveWidgets.py",
+		"/Users/kelvin/GitHub/Molecule-Tools/CoulombMatrix.py",
+		"/Users/kelvin/Google Drive/Python Salt Mines/FigureSettings.py",
+		"/Users/kelvin/GitHub/DynamicSpectroscopy/StatisticalDynamics.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1471669567/caynow/massdata/kelvin/GitHub/IPython-Notebook-Tools/SpectralAnalysis.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1471491871/caynow/massdata/kelvin/GitHub/Molecule-Tools/MoleculeTools.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1470974001/caynow/massdata/kelvin/GitHub/Molecule-Tools/MoleculeTools.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1470957781/caynow/massdata/kelvin/GitHub/IPython-Notebook-Tools/SpectralAnalysis.py",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/caynow",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1470890110/caynow/massdata/kelvin/GitHub/Molecule-Tools/MoleculeTools.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1470871731/caynow/massdata/kelvin/GitHub/IPython-Notebook-Tools/NotebookTools.py",
+		"/Users/kelvin/GitHub/DynamicSpectroscopy/EnergyLevels.py",
+		"/Users/kelvin/GitHub/JupyterPresentations/PresentationTools.py",
+		"/Users/kelvin/GitHub/TrajectoryAnalysis/TrajectoryAnalysis.py",
+		"/Users/kelvin/GitHub/DynamicSpectroscopy/SpectroscopyTools.py",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1469339895/caynow/massdata/kelvin/pythonscripts/NotebookTools.py",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/Default (OSX).sublime-mousemap",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/Anaconda/Default (OSX).sublime-keymap",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/Anaconda/README.md",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1468998223/caynow/massdata/kelvin/grow_source/xe/fragment/angmom.f",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1468998205/caynow/massdata/kelvin/grow_source/xe/fragment/fragdata.f",
+		"/var/folders/zk/q138d0m964b46mx0j_73stbw0000gn/T/sublime-sftp-browse-1468994658/caynow/massdata/kelvin/grow_source/xe/fragment/fragment.f",
+		"/Users/kelvin/GitHub/TheoryTools/TrajectoryAnalysis.py",
+		"/Users/kelvin/GitHub/CythonRoutines/CUDAIon.py",
+		"/Users/kelvin/Downloads/Widgets.py",
+		"/Users/kelvin/GitHub/CythonRoutines/ParallelDriver.py",
+		"/Users/kelvin/GitHub/IPython-Notebook-Tools/FittingRoutines.py",
+		"/Users/kelvin/GitHub/CythonRoutines/IonGeneration.pyx",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+		"/Users/kelvin/GitHub/Blender-Scripts/ImportXYZ.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/imagecentererfier_supp.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/imagecropperer.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/Programs/Jeppe Vibronic/monomer_avqz3.m",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/fcf_supp.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/Spectroscopy/spectroscopy_supp.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/harmonic_oscillator.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/fcf.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/Programs/spectroscopy/1Dparticle.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/Programs/spectroscopy/1D_supp.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/Programs/spectroscopy/sqvar.f90",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/imagecentererfier_v3.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/Programs/Jeppe Vibronic/forjo/onedim.f",
+		"/Users/kelvin/Dropbox/Kelvin lee/Programs/cyclictransition/main.c",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/internal_freq_supp.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/internal_freq_analysis_v2.py",
+		"/Users/kelvin/Dropbox/Kelvin lee/python/internal_freq_g03_v3.py",
+		"/Users/kelvin/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"break",
+			"GenerateColours",
+			"line",
+			"Gaussian",
+			"SetLab",
+			"ConvertSpeed",
+			"Normalise",
+			"Prior",
+			"Atom",
+			"Bootstrap",
+			"Noise",
+			"Convolve",
+			"PT",
+			"Detect",
+			"PeakFinding",
+			"nan",
+			"Eavail",
+			"Integrate",
+			"Bootstrap",
+			"LinearRe",
+			"Database",
+			"Convert",
+			"Match",
+			"Fit",
+			"Interpolate",
+			"drop",
+			"pep",
+			"StripEx",
+			"Distance",
+			"Calibrate",
+			"Peak",
+			"+++",
+			"LoadSpectr",
+			"LoadSpectrum",
+			"LoadSpec",
+			"drop",
+			"Bootstrap",
+			"AddNoise",
+			"Bootstrap",
+			"Bootstra",
+			"Export",
+			"Normalise",
+			"=\"",
+			"figsi",
+			"Integrate",
+			"Slice",
+			"slice",
+			"GetFitP",
+			"GetFit",
+			"PlotSelector",
+			"Checkbox",
+			"HEAD",
+			"break",
+			"Bootstrap",
+			"Pickle",
+			"4f",
+			"Detect",
+			"ExportFits",
+			"Export",
+			"ExportData",
+			"Blur",
+			"Report",
+			".Report",
+			"Report",
+			"inspect",
+			"value",
+			"smooth",
+			"Convert",
+			"enumerate",
+			"Export",
+			"CalculateAngle",
+			"Export",
+			"TrueDouble",
+			"d(",
+			"pn",
+			"max",
+			"griddim",
+			"readlines()",
+			"readlines",
+			"random"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "setup.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "qchem_pytools/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "qchem_pytools/abinitio_directories.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "qchem_pytools/abinitio_template.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "qchem_pytools/cfour_input.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "qchem_pytools/cfour_parse.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "qchem_pytools/figure_settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "qchem_pytools/html_template.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								822,
+								822
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 203.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 98.0
+	},
+	"pinned_build_system": "",
+	"project": "qchem_pytools.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/Kelvin lee/python/imagecentererfier.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

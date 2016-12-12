@@ -464,3 +464,13 @@ def plotize(data, layout=None):
     }
 
     IPython.display.display(bundle, raw=True)
+
+
+def save_plotly_html(figure, filename):
+    """ This function will export a plotly plot as HTML """
+    with open(filename, "w+") as WriteFile:
+        WriteFile.write(
+                figure,
+                output="div",
+                auto_open=False
+            )
