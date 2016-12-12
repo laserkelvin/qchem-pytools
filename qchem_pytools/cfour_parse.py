@@ -20,6 +20,7 @@ import os
 from qchem_pytools import figure_settings
 from qchem_pytools import html_template
 
+
 class OutputFile:
     InfoDict = {
         "filename": " ",
@@ -43,14 +44,13 @@ class OutputFile:
         "avg_cc": 0.,
         "gradient norm": [],
         "paths": {
-           "root": " ",
+            "root": " ",
             "json": " ",
             "figures": " ",
             "calcs": " ",
             "output": " ",
         }
     }
-
 
     def __init__(self, File):
         for key in self.InfoDict["paths"]:
@@ -61,7 +61,6 @@ class OutputFile:
         self.plot_generation()
         self.save_json(self.InfoDict["paths"]["json"] + self.InfoDict["filename"] + ".json")
         html_template.html_report(self.InfoDict)
-
 
     def parse(self):
         scf_iter = 0
@@ -180,10 +179,8 @@ class OutputFile:
         self.InfoDict["avg_scf"] = np.average(scf_iteration_data)
         self.InfoDict["avg_cc"] = np.average(cc_iteration_data)
 
-
     def print_results(self):
         return self.InfoDict
-
 
     def plot_generation(self):
         """ Method that will generate a summary of energy convergence """
@@ -254,7 +251,6 @@ class OutputFile:
                             )
                     )
 
-
     def export_xyz(self, Filename=None):
         if Filename == None:
             Filename = self.InfoDict["filename"] + ".xyz"
@@ -269,11 +265,9 @@ class OutputFile:
                     WriteFile.write(" ")
                 WriteFile.write("\n")
 
-
     def print_xyz(self):
         for Line in self.InfoDict["coordinates"]:
             print(Line)
-
 
     def save_json(self, Filename=None):
         import json
