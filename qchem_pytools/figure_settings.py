@@ -4,6 +4,7 @@ from plotly.offline import *
 from plotly.graph_objs import *
 from plotly.tools import *
 from plotly.utils import PlotlyJSONEncoder
+import plotly.plotly as pltly
 
 import numpy as np
 from scipy.constants import golden_ratio
@@ -237,6 +238,7 @@ def GenerateSubPlotObject(ColumnNames, NRows, NCols, Orientation="Square"):
             subplot_titles=ColumnNames
         )
     return SubplotObject
+
 
 def MakeSubplot(DataFrame,
                 NRows,
@@ -474,3 +476,7 @@ def save_plotly_html(figure, filename):
                 output="div",
                 auto_open=False
             )
+
+
+def save_plotly_png(figure, filename):
+    pltly.image.save_as(figure, filename=filename, format="png")

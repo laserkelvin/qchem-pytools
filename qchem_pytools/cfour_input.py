@@ -1,40 +1,64 @@
 
 import os
 import subprocess
-import sys
-
+import json
+import time
 
 class cfour_zmat:
-    settings = {
-        "basis": "ANO0",
-        "method": "CCSD",
-        "scf_conv": "9",
-        "cc_conv": "9",
-        "geo_conv": "5",
-        "lineq_conv": "9",
-        "reference": "rhf",
-        "multiplicity": "1",
-        "zmat": """
-        """,
-        "frozen_core": "OFF",
-        "comment": "Generated CFOUR ZMAT",
-        "cfour_path": "/opt/cfour/cfour15/bin/",
-    }
 
     zmat_template = """{comment}
 {zmat}
 *CFOUR(CALC_LEVEL={method}
 BASIS={basis}
 SCF_CONV={scf_conv}
+CC_PROGRAM={cc_program}
 CC_CONV={cc_conv}
 GEO_CONV={geo_conv}
 LINEQ_CONV={lineq_conv}
+MEM_UNIT=GB
+MEMORY_SIZE={memory}
+CHARGE={charge}
 ABCDTYPE=AOBASIS
+EXCITE={excite}
+DBOC={dboc}
+RELATIVISTIC={relativistic}
+VIB={vib}
+FREQ_ALGORITHM={freq_algorithm}
 REFERENCE={reference}
 MULTIPLICITY={multiplicity}
-FROZEN_CORE={frozen_core}"""
+SCF_DAMPING={scf_damping}
+FROZEN_CORE={frozen_core})
+{footer}
+"""
 
-    def __init__(self, comment, zmat, filename):
+    def __init__(self, comment, zmat, filename, rerun=False):
+        self.settings = {
+            "basis": "ANO0",
+            "method": "CCSD",
+            "cc_program": "ECC",
+            "memory": "1",
+            "scf_conv": "9",
+            "cc_conv": "9",
+            "geo_conv": "5",
+            "lineq_conv": "9",
+            "reference": "RHF",
+            "charge": "0",
+            "multiplicity": "1",
+            "excite": "NONE",
+            "scf_damping": "1000",
+            "dboc": "OFF",
+            "relativistic": "OFF",
+            "vib": "NO",
+            "freq_algorithm": "ANALYTIC",
+            "zmat": """
+            """,
+            "frozen_core": "OFF",
+            "comment": "Generated CFOUR ZMAT",
+            "cfour_path": "/opt/cfour/cfour15/bin/",
+            "footer": "",
+            "timestamp": time.strftime("%d/%m/%Y") + "\t" + time.strftime("%H:%M:%S")
+        }
+        self.rerun = rerun
         self.settings["comment"] = comment
         self.settings["filename"] = filename
         self.settings["zmat"] = zmat
@@ -45,16 +69,20 @@ FROZEN_CORE={frozen_core}"""
         self.output = self.settings["file_path"] + filename + ".out"
 
     def write_zmat(self):
-        try:
+        if (os.path.exists(self.settings["file_path"])) is True:
+            pass
+        else:
             os.mkdir(self.settings["file_path"])
-        except FileExistsError:
+        if os.path.isfile(self.settings["file_path"] + "ZMAT"):
             cont = input("Folder already exists, continue? Y/N\t")
             if cont == "Y" or "y":
                 with open(self.settings["file_path"] + "ZMAT", "w+") as WriteFile:
-                    self.input = self.input + ")\n"
                     WriteFile.write(self.input)
             elif cont == "N" or "n":
                 pass
+        else:
+            with open(self.settings["file_path"] + "ZMAT", "w+") as WriteFile:
+                WriteFile.write(self.input)
 
     def build_zmat(self, extra=None):
         """ Method that will construct the ZMAT file.
@@ -65,14 +93,19 @@ FROZEN_CORE={frozen_core}"""
         if extra is not None:
             for item in extra:
                 self.input = self.input + item + "\n"
+        print(self.input)
 
     def run_calc(self):
         command = self.settings["cfour_path"] + "xcfour"
         os.chdir(self.settings["file_path"])
-        with open(self.output, "w+") as WriteFile:
-            subprocess.run([command], stdout=WriteFile, stderr=WriteFile)
+        if self.rerun is True:
+            with open(self.output, "w+") as WriteFile:
+                subprocess.run([command], stdout=WriteFile, stderr=WriteFile)
+                print("Calculation finished.")
+                self.clean()
+        elif self.rerun is False:
+            print("Rerun is set to false, calculation not run.")
         os.chdir(self.settings["root_path"])
-        print("Calculation finished.")
 
     def clean(self):
         os.chdir(self.settings["file_path"])
@@ -86,3 +119,9 @@ FROZEN_CORE={frozen_core}"""
         for file in files:
             os.system("rm -r " + file)
         os.chdir(self.settings["root_path"])
+
+    def save_json(self, Filename=None):
+        if Filename is None:
+            Filename = "json/" + self.settings["filename"] + ".settings.json"
+        with open(Filename, "w+") as WriteFile:
+            json.dump(self.settings, WriteFile)

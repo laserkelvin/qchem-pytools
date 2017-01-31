@@ -1,14 +1,18 @@
 
 
 from string import Formatter
+#from xhtml2pdf import pisa
+import pandas as pd
+
+
 class YourFormatter(Formatter):
     def get_value(self, field_name, args, kwargs):
         return kwargs.get(field_name, '')
 
     def get_field(self, field_name, args, kwargs):
-        first, rest = field_name._formatter_field_name_split() 
-        obj = self.get_value(first, args, kwargs) 
-        
+        first, rest = field_name._formatter_field_name_split()
+        obj = self.get_value(first, args, kwargs)
+
         for is_attr, i in rest:
             if is_attr:
                 obj = getattr(obj, i)
@@ -17,7 +21,7 @@ class YourFormatter(Formatter):
         return obj, first
 
 
-def html_report(json_results):
+def html_report(json_results, print_orbitals=False, interact=False):
     header = """
     <header>
         <h1>
@@ -37,6 +41,7 @@ def html_report(json_results):
         </h3>
         <p>
             Final electronic energy: {energies[final_energy]} Ha
+            Final SCF energy: {energies[final_scf]} Ha
         </p>
         <p>
             SCF took {nscf} cycles, averaging at {avg_scf} iterations per cycle.
@@ -71,14 +76,52 @@ def html_report(json_results):
     """
 
     fullstring = ""
-    for part in [header, electronic, structure]:
-        fullstring = fullstring + part.format_map(json_results)
+    try:
+        for part in [header, electronic, structure]:
+            fullstring = fullstring + part.format_map(json_results)
+    except IndexError:
+        pass
 
-    with open("./figures/" + json_results["filename"] + ".scf_report.html", "r") as ReadFile:
-        fullstring = fullstring + ReadFile.read()
+    if interact is True:
+        with open(json_results["paths"]["figures"] + json_results["filename"] + ".scf_report.html", "r") as ReadFile:
+            fullstring = fullstring + ReadFile.read()
 
-    with open("./figures/" + json_results["filename"] + ".geo_report.html", "r") as ReadFile:
-        fullstring = fullstring + ReadFile.read()
-        
+        if len(json_results["gradient norm"]) > 0:
+            with open(json_results["paths"]["figures"] + json_results["filename"] + ".geo_report.html", "r") as ReadFile:
+                fullstring = fullstring + ReadFile.read()
+
+    if print_orbitals is True:
+        orbital_df = pd.DataFrame(
+            json_results["orbitals"],
+            index=["Energy (Ha)", "Irreducible rep.", "Rep. #"]
+            ).T
+        orbital_html = orbital_df.to_html()
+        fullstring = fullstring + "<h3> Occupied orbitals </h3>" + orbital_html
+
+    if len(json_results["frequencies"]) > 1:
+        freq_df = pd.DataFrame(
+            json_results["frequencies"],
+            columns=["Irred. rep", "Frequency (1/cm)", "Intensity (km/mol"]
+            )
+        freq_html = freq_df.to_html()
+        fullstring = fullstring + "<h3> Frequencies </h3>" + freq_html
+
     with open("./docs/" + json_results["filename"] + "_report.html", "w+") as WriteFile:
         WriteFile.write(fullstring)
+
+
+# Utility function
+#def convert_html_to_pdf(source_html_file, output_filename):
+    # open output file for writing (truncated binary)
+#    with open(source_html_file, "r") as source_file:
+#        source_html = source_file.read()
+
+#    with open(output_filename, "w+b") as result_file:
+        # convert HTML to PDF
+#        pisa_status = pisa.CreatePDF(
+#            source_html,                # the HTML to convert
+#            dest=result_file            # file handle to recieve result
+#        )
+
+    # return True on success and False on errors
+#    return pisa_status.err

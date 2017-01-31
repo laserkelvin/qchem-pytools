@@ -19,48 +19,57 @@ import numpy as np
 import os
 from qchem_pytools import figure_settings
 from qchem_pytools import html_template
+import json
 
 
 class OutputFile:
-    InfoDict = {
-        "filename": " ",
-        "basis": " ",
-        "success": False,
-        "method": " ",
-        "dipole moment": [0., 0., 0.],
-        "point group": " ",
-        "energies": {
-            "final_energy": 0.,
-            "scf_cycles": dict(),
-            "cc_cycles": dict(),
-        },
-        "coordinates": [],
-        "input zmat": [],
-        "final zmat": [],
-        "natoms": 0,
-        "nscf": 0.,
-        "ncc": 0.,
-        "avg_scf": 0.,
-        "avg_cc": 0.,
-        "gradient norm": [],
-        "paths": {
-            "root": " ",
-            "json": " ",
-            "figures": " ",
-            "calcs": " ",
-            "output": " ",
-        }
-    }
 
-    def __init__(self, File):
+    def __init__(self, File, print_orbitals=False, interact=False):
+        self.InfoDict = {
+            "filename": " ",
+            "basis": " ",
+            "success": False,
+            "method": " ",
+            "dipole moment": [0., 0., 0.],
+            "rotational constants": [0., 0., 0.],
+            "point group": " ",
+            "orbitals": dict(),
+            "energies": {
+                "final_energy": 0.,
+                "final_scf": 0.,
+                "scf_cycles": dict(),
+                "cc_cycles": dict(),
+            },
+            "coordinates": [],
+            "input zmat": [],
+            "final zmat": [],
+            "frequencies": [],
+            "zpe": 0.,
+            "natoms": 0,
+            "nscf": 0.,
+            "ncc": 0.,
+            "avg_scf": 0.,
+            "avg_cc": 0.,
+            "gradient norm": [],
+            "paths": {
+                "root": " ",
+                "json": " ",
+                "figures": " ",
+                "calcs": " ",
+                "output": " ",
+            }
+        }
         for key in self.InfoDict["paths"]:
             self.InfoDict["paths"][key] = os.path.abspath("./" + key) + "/"
         self.InfoDict["paths"]["full"] = self.InfoDict["filename"] = File
         self.InfoDict["filename"] = os.path.split(File)[1].split(".")[0]
         self.parse()
-        self.plot_generation()
-        self.save_json(self.InfoDict["paths"]["json"] + self.InfoDict["filename"] + ".json")
-        html_template.html_report(self.InfoDict)
+        if self.InfoDict["success"] is True:
+            self.plot_generation()
+            self.save_json(self.InfoDict["paths"]["json"] + self.InfoDict["filename"] + ".json")
+            html_template.html_report(self.InfoDict, print_orbitals, interact)
+        else:
+            print("Calculation has not completed, or crashed!")
 
     def parse(self):
         scf_iter = 0
@@ -73,6 +82,8 @@ class OutputFile:
         RotFlag = False
         SCFFlag = False
         CCFlag = False
+        OrbFlag = False
+        FreqFlag = False
         IZMATFlag = False        # Initial ZMAT file
         FZMATFlag = False        # Final ZMAT file
         ReadCoords = False
@@ -96,7 +107,8 @@ class OutputFile:
                     self.InfoDict["method"] += "-" + ReadLine[1].split()[0]
                 if RotFlag is True:            # if flagged to read the rotational constants
                     ReadLine = Line.split()
-                    self.InfoDict["rotational constants"] = [float(Value) for Value in ReadLine]
+                    for index, value in enumerate(ReadLine):
+                        self.InfoDict["rotational constants"][index] = value
                     RotFlag = False
                 if ("Rotational constants (in MHz)") in Line:
                     RotFlag = True
@@ -170,91 +182,146 @@ class OutputFile:
                     skip_counter = 0
                     CurrentCC = []
                     CCFlag = True
+                if OrbFlag is True:
+                    """ Read in orbital information """
+                    if ("++++++") in Line:
+                        OrbFlag = False
+                        skip_counter = 0
+                    if skip_counter == 1:
+                        ReadLine = Line.split()
+                        OrbitalNo = int(ReadLine[0])
+                        Orbital = []
+                        Orbital.append(float(ReadLine[2]))
+                        Orbital.append(ReadLine[5])
+                        Orbital.append(ReadLine[6])
+                        self.InfoDict["orbitals"][OrbitalNo] = Orbital
+                    if ("----") in Line:
+                        skip_counter += 1
+                if ("MO #        E(hartree)") in Line:
+                    OrbFlag = True
+                    skip_counter = 0
+                if FreqFlag is True:
+                    if ("--------") in Line:
+                        skip_counter += 1
+                    if skip_counter == 2:
+                        FreqFlag = False
+                    if skip_counter == 1:
+                        ReadLine = Line.split()
+                        if len(ReadLine) > 1:
+                            self.InfoDict["frequencies"].append([
+                                                        ReadLine[0],
+                                                        ReadLine[1],
+                                                        ReadLine[2]]
+                            )
+                if ("(cm-1)         (km/mol)") in Line:
+                    FreqFlag = True
+                    skip_counter = 0
+
         self.InfoDict["natoms"] = len(self.InfoDict["coordinates"])
         self.InfoDict["nscf"] = len(self.InfoDict["energies"]["scf_cycles"])
         self.InfoDict["ncc"] = len(self.InfoDict["energies"]["cc_cycles"])
 
         scf_iteration_data = [len(self.InfoDict["energies"]["scf_cycles"][cycle]) for cycle in self.InfoDict["energies"]["scf_cycles"]]
         cc_iteration_data = [len(self.InfoDict["energies"]["cc_cycles"][cycle]) for cycle in self.InfoDict["energies"]["cc_cycles"]]
-        self.InfoDict["avg_scf"] = np.average(scf_iteration_data)
-        self.InfoDict["avg_cc"] = np.average(cc_iteration_data)
+
+        self.InfoDict["final_scf"] = min(self.InfoDict["energies"]["scf_cycles"][self.InfoDict["nscf"] - 1])
+        if self.InfoDict["nscf"] != 0.:
+            self.InfoDict["avg_scf"] = np.average(scf_iteration_data)
+        if self.InfoDict["ncc"] != 0.:
+            self.InfoDict["avg_cc"] = np.average(cc_iteration_data)
 
     def print_results(self):
-        return self.InfoDict
+        print(self.InfoDict)
 
-    def plot_generation(self):
+    def plot_generation(self, save_png=True):
         """ Method that will generate a summary of energy convergence """
         first_scf = pd.DataFrame(
-                data=self.InfoDict["energies"]["scf_cycles"][0],
-                columns=["SCF energy"]
-            )
+            data=self.InfoDict["energies"]["scf_cycles"][0],
+            columns=["SCF energy"]
+        )
         last_scf = pd.DataFrame(
-                data=self.InfoDict["energies"]["scf_cycles"][self.InfoDict["nscf"] - 1],
-                columns=["SCF energy"]
-            )
+            data=self.InfoDict["energies"]["scf_cycles"][self.InfoDict["nscf"]-1],
+            columns=["SCF energy"]
+        )
         scf_figure = figure_settings.GenerateSubPlotObject(
-                ["First SCF cycle", "Final SCF cycle"],
-                1,
-                2,
-                "Landscape",
-            )
+            ["First SCF cycle", "Final SCF cycle"],
+            1,
+            2,
+            "Landscape",
+        )
         for index, plot in enumerate([first_scf, last_scf]):
             plot_object = figure_settings.DefaultScatterObject(
-                    plot.index,
-                    plot["SCF energy"]
-                )
+                plot.index,
+                plot["SCF energy"]
+            )
             scf_figure.append_trace(plot_object, 1, index + 1)
             scf_figure["layout"]["xaxis" + str(index + 1)].update(
-                    {
-                        "title": "Iterations"
-                    }
-                )
-        scf_figure["layout"].update(
-                width= 900.,
-                height= (900. / 1.6),
-                showlegend=False
-            )
-        scf_figure["layout"]["yaxis"].update(
                 {
-                    "title": "Energy (Ha)"
+                    "title": "Iterations"
                 }
-                )
+            )
+        scf_figure["layout"].update(
+            width=900.,
+            height=(900. / 1.6),
+            showlegend=False
+        )
+        scf_figure["layout"]["yaxis"].update(
+            {
+                "title": "Energy (Ha)"
+            }
+        )
+        if save_png is True:
+            figure_settings.save_plotly_png(
+                scf_figure,
+                self.InfoDict["paths"]["figures"] + self.InfoDict["filename"] + ".scf_report.jpg"
+            )
         with open(self.InfoDict["paths"]["figures"] + self.InfoDict["filename"] + ".scf_report.html", "w+") as WriteFile:
             WriteFile.write(
                 figure_settings.plot(
-                        scf_figure,
-                        output_type="div",
-                        auto_open=False
-                    )
+                    scf_figure,
+                    output_type="div",
+                    auto_open=False
+                )
             )
         if len(self.InfoDict["gradient norm"]) > 0:
             geometry_opt = pd.DataFrame(
-                    data=self.InfoDict["gradient norm"]
-                )
+                data=self.InfoDict["gradient norm"]
+            )
             geometry_plot = [
                 figure_settings.DefaultScatterObject(
-                        X=geometry_opt.index,
-                        Y=geometry_opt[0],
-                        Name="Molecular gradient",
-                    )
+                    X=geometry_opt.index,
+                    Y=geometry_opt[0],
+                    Name="Molecular gradient",
+                )
             ]
             geometry_layout = figure_settings.DefaultLayoutSettings()
             geometry_layout["title"] = "Geometry optimisation progress"
             geometry_layout["xaxis"]["title"] = "Iteration"
             geometry_layout["yaxis"]["title"] = "Molecular gradient norm"
+
+            geometry_figure = figure_settings.Figure(
+                data=geometry_plot,
+                layout=geometry_layout
+            )
+
+            if save_png is True:
+                figure_settings.save_plotly_png(
+                    geometry_figure,
+                    self.InfoDict["paths"]["figures"] + self.InfoDict["filename"] + ".geo_report.jpg"
+                )
             with open(self.InfoDict["paths"]["figures"] + self.InfoDict["filename"] + ".geo_report.html", "w+") as WriteFile:
                 WriteFile.write(
-                        figure_settings.plot(
-                                {"data": geometry_plot, "layout": geometry_layout},
-                                output_type="div",
-                                auto_open=False
-                            )
+                    figure_settings.plot(
+                        {"data": geometry_plot, "layout": geometry_layout},
+                        output_type="div",
+                        auto_open=False
                     )
+                )
 
     def export_xyz(self, Filename=None):
-        if Filename == None:
+        if Filename is None:
             Filename = self.InfoDict["filename"] + ".xyz"
-        Filename = self.path["root"] + "/" + Filename
+        Filename = self.paths["root"] + "/" + Filename
         with open(Filename, "w+") as WriteFile:
             WriteFile.write(str(self.InfoDict["natoms"]))
             WriteFile.write("Output geometry for " + self.InfoDict["filename"] + " in Bohr\n")
@@ -270,7 +337,6 @@ class OutputFile:
             print(Line)
 
     def save_json(self, Filename=None):
-        import json
         if Filename is None:
             Filename = self.InfoDict["filename"] + ".json"
         with open(Filename, "w+") as WriteFile:

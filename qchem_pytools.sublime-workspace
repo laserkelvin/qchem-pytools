@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"residual",
+				"residual_trace\tstatement"
+			],
+			[
+				"Defa",
+				"DefaultScatterObject\tfunction"
+			],
+			[
+				"orbital_",
+				"orbital_html"
+			],
+			[
+				"Orbita",
+				"OrbitalNo"
+			],
+			[
+				"Orbit",
+				"OrbitalNo"
+			],
+			[
 				"dir",
 				"dir\tdir"
 			],
@@ -218,10 +238,6 @@
 			[
 				"Blu",
 				"BlurSize\t(statement)"
-			],
-			[
-				"Defa",
-				"DefaultAxes\t(function)"
 			],
 			[
 				"Parameter",
@@ -495,7 +511,7 @@
 			"file": "setup.py",
 			"settings":
 			{
-				"buffer_size": 298,
+				"buffer_size": 467,
 				"line_ending": "Unix"
 			}
 		},
@@ -503,15 +519,7 @@
 			"file": "qchem_pytools/__init__.py",
 			"settings":
 			{
-				"buffer_size": 183,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "qchem_pytools/abinitio_directories.py",
-			"settings":
-			{
-				"buffer_size": 803,
+				"buffer_size": 276,
 				"line_ending": "Unix"
 			}
 		},
@@ -527,7 +535,8 @@
 			"file": "qchem_pytools/cfour_input.py",
 			"settings":
 			{
-				"buffer_size": 2281,
+				"buffer_size": 3706,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -535,7 +544,8 @@
 			"file": "qchem_pytools/cfour_parse.py",
 			"settings":
 			{
-				"buffer_size": 11531,
+				"buffer_size": 14195,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -543,7 +553,7 @@
 			"file": "qchem_pytools/figure_settings.py",
 			"settings":
 			{
-				"buffer_size": 15804,
+				"buffer_size": 15941,
 				"line_ending": "Unix"
 			}
 		},
@@ -551,22 +561,105 @@
 			"file": "qchem_pytools/html_template.py",
 			"settings":
 			{
-				"buffer_size": 2558,
+				"buffer_size": 4030,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/molecule_tools.py",
+			"settings":
+			{
+				"buffer_size": 21400,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "qchem_pytools/abinitio_directories.py",
+			"settings":
+			{
+				"buffer_size": 803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qchem_pytools/fitkit.py",
+			"settings":
+			{
+				"buffer_size": 3212,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"PdfLaTeX"
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 111.0,
-		"last_filter": "Package Control: Remov",
+		"height": 129.0,
+		"last_filter": "Package Control: instal",
 		"selected_items":
 		[
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: Remov",
 				"Package Control: Remove Package"
@@ -612,7 +705,7 @@
 				"Package Control: Enable Package"
 			]
 		],
-		"width": 593.0
+		"width": 549.0
 	},
 	"console":
 	{
@@ -637,6 +730,24 @@
 	},
 	"file_history":
 	[
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/full_atomic_data.json",
+		"/C/Users/Kelvin/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Default (Windows).sublime-keymap",
+		"/C/Users/Kelvin/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/Kelvin/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/atom_data.py",
+		"/D/Dropbox/Personal/Transcripts/Resume/RACI Event/let9a.tex",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/atomic_data.json",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools.sublime-project",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools.sublime-workspace",
+		"/D/Google Drive/Git/qchem-pytools/setup.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/__init__.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/molecule_tools.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/abinitio_directories.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/abinitio_template.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/cfour_input.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/cfour_parse.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/figure_settings.py",
+		"/D/Google Drive/Git/qchem-pytools/qchem_pytools/html_template.py",
 		"/Users/kelvin/GitHub/IPython-Notebook-Tools/NotebookTools.py",
 		"/Users/kelvin/GitHub/Molecule-Tools/MoleculeTools.py",
 		"/Users/kelvin/GitHub/IPython-Notebook-Tools/SpectralAnalysis.py",
@@ -706,7 +817,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -720,6 +831,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"orbital",
+			"natoms",
+			"Charge",
+			"print",
 			"break",
 			"GenerateColours",
 			"line",
@@ -817,7 +932,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -826,7 +941,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 298,
+						"buffer_size": 467,
 						"regions":
 						{
 						},
@@ -839,16 +954,15 @@
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -857,38 +971,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 183,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								183,
-								183
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "qchem_pytools/abinitio_directories.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 803,
+						"buffer_size": 276,
 						"regions":
 						{
 						},
@@ -901,21 +984,17 @@
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "qchem_pytools/abinitio_template.py",
 					"semi_transient": false,
 					"settings":
@@ -933,14 +1012,41 @@
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "qchem_pytools/cfour_input.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -948,11 +1054,11 @@
 				},
 				{
 					"buffer": 4,
-					"file": "qchem_pytools/cfour_input.py",
+					"file": "qchem_pytools/cfour_parse.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2281,
+						"buffer_size": 14195,
 						"regions":
 						{
 						},
@@ -965,14 +1071,12 @@
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 100.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -980,98 +1084,170 @@
 				},
 				{
 					"buffer": 5,
-					"file": "qchem_pytools/cfour_parse.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11531,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "qchem_pytools/figure_settings.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15804,
+						"buffer_size": 15941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								11772,
+								11772
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 8540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "qchem_pytools/html_template.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2558,
+						"buffer_size": 4030,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								822,
-								822
+								2636,
+								2636
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 203.0,
+						"translation.y": 1500.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "qchem_pytools/molecule_tools.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15608,
+								15608
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5583.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "qchem_pytools/abinitio_directories.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								656,
+								656
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "qchem_pytools/fitkit.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3210,
+								3210
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 700.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1114,6 +1290,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 130.0
 	},
 	"output.sftp":
 	{
